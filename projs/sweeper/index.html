@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mine Sweeper</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="resetGame()">
+
+    <h1>Mine Sweeper</h1>
+    <ul class="levels">
+        <li class="selected" onclick="levelClicked(this, 'beginner')">Beginner</li>
+        <li class="" onclick="levelClicked(this, 'medium')">Medium</li>
+        <li class="" onclick="levelClicked(this, 'expert')">Expert</li>
+    </ul>
+
+    <div>
+        <!-- <div class="game-header"></div> -->
+        <table>
+            <thead class="game-header"></thead>
+            <tbody class="board">
+
+            </tbody>
+
+        </table>
+    </div>
+    <button class "replay" onclick="resetGame()">Replay</button>
+    <div>
+    <h4>Best Scores:</h4>
+    <ul class="best-scores">
+        <li class="beginner-score"></li>
+        <li class="medium-score"></li>
+        <li class="expert-score"></li>
+
+    </ul>
+    <button onclick="resetScores()">Reset Scores</button>
+
+</div>
+
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
