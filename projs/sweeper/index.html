@@ -8,36 +8,47 @@
 </head>
 
 <body onload="resetGame()">
+    <div class="main-container">
 
-    <h1>Mine Sweeper</h1>
-    <ul class="levels">
-        <li class="selected" onclick="levelClicked(this, 'beginner')">Beginner</li>
-        <li class="" onclick="levelClicked(this, 'medium')">Medium</li>
-        <li class="" onclick="levelClicked(this, 'expert')">Expert</li>
-    </ul>
+        <h1>Mine Sweeper</h1>
+        <div class="levels">
+            <div class="selected" onclick="levelClicked(this, 'beginner')">Beginner</div>
+            <div class="" onclick="levelClicked(this, 'medium')">Medium</div>
+            <div class="" onclick="levelClicked(this, 'expert')">Expert</div>
+        </div>
+        
 
-    <div>
-        <!-- <div class="game-header"></div> -->
-        <table>
-            <thead class="game-header"></thead>
-            <tbody class="board">
+        <div class="game-container">
+                <div class="game-head">
 
-            </tbody>
+                        <div class="clock">0</div>
+                        <div colspan="6" class="smiley">🙂</div>
+                        <div class="mark-count">15</div>
+                    </div>
 
-        </table>
+            <!-- <div class="game-header"></div> -->
+            <table>
+                <tbody class="board">
+
+                </tbody>
+
+            </table>
+        </div>
+
+        <button class="replay" onclick="resetGame()">Replay</button>
+        <div>
+            
+            <h4>Best Scores:</h4>
+            <ul class="best-scores">
+                <li class="beginner-score"></li>
+                <li class="medium-score"></li>
+                <li class="expert-score"></li>
+
+            </ul>
+            <button onclick="resetScores()">Reset Scores</button>
+
+        </div>
     </div>
-    <button class "replay" onclick="resetGame()">Replay</button>
-    <div>
-    <h4>Best Scores:</h4>
-    <ul class="best-scores">
-        <li class="beginner-score"></li>
-        <li class="medium-score"></li>
-        <li class="expert-score"></li>
-
-    </ul>
-    <button onclick="resetScores()">Reset Scores</button>
-
-</div>
 
 
     <script src="js/utils.js"></script>

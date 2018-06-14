@@ -5,7 +5,7 @@ var NORMAL = '🙂';
 var SAD = '😣';
 var VICTORY = '😎';
 var BOMB = '💣';
-var colorByNumMap = { 1: 'blue', 2: 'green', 3: 'red', 4: 'darkblue', 5: 'purple', 6: 'maroon', 7: 'yellow', 8: 'orange'}
+var colorByNumMap = { 1: 'blue', 2: 'green', 3: 'red', 4: 'darkblue', 5: 'purple', 6: 'maroon', 7: 'yellow', 8: 'orange' }
 
 var gLevels = {
     beginner: { SIZE: 4, MINES: 2, LEVEL: 'beginner' },
@@ -89,12 +89,12 @@ function renderBoard() {
 
 //render board table header with smiley, markedCount and clock;
 function renderHeader() {
-    var elGameHeader = document.querySelector('.game-header');
-    var strHtml = '<tr>';
-    strHtml += '<th class="clock">0</th>';
-    strHtml += `<th  colspan="${gLevel.SIZE - 2}" class="smiley">${NORMAL}</th>`;
-    strHtml += `<th class="mark-count">${gLevel.MINES - gState.markedCount}</th></tr>`;
-    elGameHeader.innerHTML = strHtml;
+    var elClock = document.querySelector('.clock')
+    elClock.innerText = 0;
+    var elSmiley = document.querySelector('.smiley')
+    elSmiley.innerText = NORMAL;
+    var elMarkCount = document.querySelector('.mark-count');
+    elMarkCount.innerText = gLevel.MINES - gState.markedCount;
 }
 
 function setMinesNegsCount() {
@@ -188,7 +188,7 @@ function expandShown(coord) {
             }
         }
     }
-    return; 
+    return;
 }
 
 
@@ -196,7 +196,7 @@ function expandShown(coord) {
 function cellMarked(elCell, coord) {
 
     // CR: You have already tested this in "cellClicked" before you have called this func. This test is unnecessary
-    if (gState.needReset) return; 
+    if (gState.needReset) return;
 
     var cell = gBoard[coord.i][coord.j]
     var elMarkCount = document.querySelector('.mark-count');
