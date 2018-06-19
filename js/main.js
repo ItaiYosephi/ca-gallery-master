@@ -10,7 +10,7 @@ function initPage() {
 
 
 function renderPortfolio() {
-    // debugger;
+    debugger;
     var strHTML = '';
     var projs = getProjsForDisplay();
     projs.forEach(function (proj, idx) {
@@ -22,7 +22,7 @@ function renderPortfolio() {
                 <i class="fa fa-plus fa-3x"></i>
               </div>
             </div>
-            <img class="img-fluid" src="img/portfolio/${proj.id}.png" alt="">
+            <img class="img-fluid" src="img/portfolio/${proj.id}-thumbnail.jpg" alt="">
           </a>
           <div class="portfolio-caption">
             <h4>${proj.title}</h4>
@@ -40,14 +40,13 @@ function renderPortfolio() {
 }
 
 function renderModal(idx) {
-  // debugger;
   var proj = getProjByIdx(idx);
   var elPorjTitle = document.querySelector('.proj-title');
   elPorjTitle.innerText = proj.title;
   var elProjName = document.querySelector('.proj-name')
   elProjName = proj.name;
   var eliImg = document.querySelector('.modal img');
-  eliImg.src = `img/portfolio/${proj.id}.png`
+  eliImg.src = `img/portfolio/${proj.id}-full.jpg`
   var elProjDesc = document.querySelector('.proj-desc')
   elProjDesc.innerText = proj.desc;
 }
