@@ -55,6 +55,7 @@ section h3.section-subheading {
     }
 }
 
+
 ::-moz-selection {
     background: #8FB4B7;
     text-shadow: none;
@@ -78,7 +79,7 @@ body {
 }
 
 .offcanvas-btn {
-    z-index: 100000;
+    z-index: 200000;
     position: fixed;
     top: 8%;
     left: 3%;
@@ -104,15 +105,23 @@ body {
     height: 100%;
     z-index: 100000;
     background: #6C7BA1;
-    width: 50vw;
-    left: -50vw;
+    width: 100vw;
+    left: -100vw;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
+@media (min-width: 750px) {
+    .offcanvas-aside {
 
+        width: 50vw;
+        left: -50vw;
+    
+    }
+    
+}
 .offcanvas-aside img {
     border-radius: 50%;
 }
@@ -123,6 +132,9 @@ body {
 
 .offcanvas-aside .offcanvas-content-suffix {
     height: 20%;
+}
+.body-input {
+    max-width: 95vw;
 }
 
 .offcanvas-aside-open {
@@ -200,6 +212,7 @@ body {
     }
     #mainNav .navbar-nav .nav-item .nav-link {
         padding: 1.1em 1em !important;
+        color: black;
     }
     #mainNav.navbar-shrink {
         padding-top: 0;
@@ -868,6 +881,8 @@ fieldset[disabled] .btn-xl:hover {
     height: 100vh;
     background-color: #2222228f;
     position: fixed;
+    z-index: 10000;
+
 }
 
 .no-scroll {
@@ -875,7 +890,12 @@ fieldset[disabled] .btn-xl:hover {
 }
 
 .contact-btn {
-    display: block;
+    /* display: block; */
+    min-height: 50px;
+    font-size: 18px;
+    font-weight: 700;
+  
+
 }
 #contact {
     display:flex;
