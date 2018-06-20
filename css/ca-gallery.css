@@ -77,9 +77,13 @@ img::-moz-selection {
 body {
     -webkit-tap-highlight-color: #8FB4B7;
 }
+.fixed-top {
+    z-index:105001;
+}
 
 .offcanvas-btn {
-    z-index: 200000;
+    z-index: 105000;
+
     position: fixed;
     top: 8%;
     left: 3%;
@@ -96,7 +100,8 @@ body {
 }
 
 .offcanvas-btn-open {
-    margin-left: 50vw;
+    margin-left: 85vw;
+
 }
 
 .offcanvas-aside {
@@ -119,6 +124,13 @@ body {
         width: 50vw;
         left: -50vw;
     
+    }
+    .offcanvas-btn-open {
+        margin-left: 50vw;
+    
+    }
+    .fixed-top {
+        z-index:1001;
     }
     
 }
@@ -178,7 +190,6 @@ body {
     padding: 0.75em 0;
     letter-spacing: 1px;
     font-weight: bold;
-    color: black;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
 }
